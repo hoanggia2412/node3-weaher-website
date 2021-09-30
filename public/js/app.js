@@ -21,7 +21,7 @@ const img = document.querySelector('img')
 weatherForm.addEventListener('submit',(e)=>{
     const value = searchElement.value
     if(value.length>0){
-        fetch(`http://localhost:3000/weather?address=${value}`).then((res)=>{
+        fetch(`/weather?address=${value}`).then((res)=>{
             res.json().then(({forecastData,location,error = undefined} = {}) => {
             if(error)
             return messageOne.textContent = error
