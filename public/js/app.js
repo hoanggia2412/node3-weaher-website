@@ -30,10 +30,13 @@ weatherForm.addEventListener('submit',(e)=>{
                 messageTwo.textContent = `${forecastData.description.toUpperCase()} (${forecastData.temp.toFixed(2)}) °C`
             if(forecastData.description.includes("cloud")){
                 img.src = '/img/cloud.gif'
-                document.body.style.backgroundImage = "/img/cloud-background.jpg";
+                // document.body.style.backgroundImage = "/img/cloud-background.jpg";
             } else if((forecastData.description.includes("rain")))
                 img.src = '/img/rain.gif'   
+                else if((forecastData.description.includes("clear")))
+                img.src = '/img/clear.gif' 
             }
+            
             img.style.width = "150px";
             img.style.height = "150px";
              })
